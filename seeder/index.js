@@ -40,14 +40,18 @@ async function main() {
     // TODO: Buat logic fungsionalitas yg belum tersedia di bawah
     case "reset-db":
       await Model.deleteMany();
+      console.log("data reset");
       break;
     case "bulk-insert":
       const data = fs.readFileSync("./seed.json");
       const parsed = JSON.parse(data);
       await Model.insertMany(parsed);
+      console.log("data seeded");
       break;
     case "get-all":
       await Model.find();
+      const result = await Model.find();
+      console.log(result);
       break;
     default:
       throw Error("command not found");

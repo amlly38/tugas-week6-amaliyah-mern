@@ -21,7 +21,16 @@ async function main() {
   });
 
   // Define a schema for the collection
-  const schema = new mongoose.Schema({}, { strict: false });
+  const schema = new mongoose.Schema(
+    {
+      title: String,
+      year: Number,
+      genre: [String],
+      description: String,
+      director: String,
+      cast: [String],
+    }, 
+    { strict: false });
   const Model = mongoose.model(collection, schema);
 
   switch (command) {

@@ -15,6 +15,12 @@ async function generateJsonDB() {
       const detailPokemon = await fetch(pokemon.url).then((res) => res.json());
       const spesies = await fetch(detailPokemon.species.url).then((res) => res.json());
       const evo = await fetch(spesies.evolution_chain.url).then((res) => res.json());
+      const evolutionChain =[evo.chain.species.name];
+      let evolveTo = evo.chain.evolves_to[0];
+      while (evolveTo) {
+        evolutionChain.push(evolveTo.species.name);
+        evolveTo = evolveTo.evolves_to[0];
+      }
     }
 
   } catch (error) {

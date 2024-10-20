@@ -38,6 +38,17 @@ async function main() {
       await checkConnection();
       break;
     // TODO: Buat logic fungsionalitas yg belum tersedia di bawah
+    case "reset-db":
+      await Model.deleteMany();
+      break;
+    case "bulk-insert":
+      const data = fs.readFileSync("./seed.json");
+      const parsed = JSON.parse(data);
+      await Model.insertMany(parsed);
+      break;
+    case "get-all":
+      await Model.find();
+      break;
     default:
       throw Error("command not found");
   }

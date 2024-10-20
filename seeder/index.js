@@ -1,4 +1,7 @@
 const mongoose = require("mongoose");
+const fs = require("fs");
+const seed = require("./seed.json")
+
 require("dotenv").config();
 
 async function main() {

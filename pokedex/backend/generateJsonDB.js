@@ -32,11 +32,12 @@ async function generateJsonDB() {
       }
       payload.push(item);
     }
+    console.log(payload);
+    fs.writeFileSync("./db.json", JSON.stringify({
+      pokemon: payload}, null, 2), "utf-8");
 
   } catch (error) {
     console.log(error);
   }  
-  
 }
-
 generateJsonDB();

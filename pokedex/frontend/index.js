@@ -28,7 +28,7 @@ function PokemonCard(props) {
       "div",
       {
         className:
-          "bg-slate-800 rounded-lg p-6 shadow-md transform hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out", // Hover effect
+          "bg-slate-800 rounded-lg p-6 shadow-md transform hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out", 
       },
       React.createElement("img", {
         className: "w-32 h-32 mx-auto mb-4 rounded-full border-4 border-indigo-600",
@@ -48,21 +48,19 @@ function PokemonCard(props) {
     )
   );
 }
-
-
 // List component
 function PokemonList() {
   if (pokemonData.length === 0) {
     return React.createElement(
       "p",
-      { className: "text-center" },
+      { className: "text-center text-gray-400" }, 
       "Loading Pokemon data..."
     );
   }
 
   return React.createElement(
     "div",
-    { className: "flex flex-wrap justify-center" },
+    { className: "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6" }, 
     pokemonData.map((pokemon) =>
       React.createElement(PokemonCard, {
         key: pokemon.id,

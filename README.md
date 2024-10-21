@@ -1,4 +1,4 @@
-# Tugas Minggu Ke-6 Pembelajaran Studi Independen Voacasia FSWD oleh Amaliyah
+# Tugas Minggu Ke-6 Pembelajaran Studi Independen Vocasia oleh Amaliyah (FS-C)
 Reporistori ini dibuat untuk memenuhi tugas week 6
 Studi Independen di Vocasia bidang Fullstack Website Development
 

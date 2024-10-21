@@ -76,14 +76,24 @@ function PokemonList() {
 function App() {
   return React.createElement(
     "div",
-    { className: "" },
+    { className: "bg-gradient-to-b from-gray-900 to-slate-900 min-h-screen p-8" }, 
     React.createElement(
       "header",
-      { className: "" },
+      { className: "bg-slate-800 py-4 shadow-lg" },
       React.createElement(
         "h1",
-        { className: "text-3xl text-center font-bold underline" },
-        "Pokedex"
+        {
+          className: "text-center text-3xl font-semibold tracking-wide",
+        },
+        React.createElement("span", { className: "text-white" }, "Welcome to "),
+        React.createElement(
+          "span",
+          {
+            className:
+              "bg-gradient-to-r from-red-500 via-yellow-500 to-blue-500 text-transparent bg-clip-text font-extrabold", 
+          },
+          "Pokedex"
+        )
       )
     ),
     React.createElement(PokemonList, null)

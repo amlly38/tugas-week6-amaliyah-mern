@@ -22,13 +22,13 @@ function PokemonCard(props) {
     "div",
     {
       className:
-        "p-1 m-4 bg-gradient-to-r from-red-500 via-yellow-500 to-blue-500 rounded-lg", // Gradient border trick
+        "p-1 m-4 bg-gradient-to-r from-red-500 via-yellow-500 to-blue-500 rounded-lg",
     },
     React.createElement(
       "div",
       {
         className:
-          "bg-slate-800 rounded-lg p-6 shadow-md transform hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out",
+          "bg-slate-800 rounded-lg p-6 shadow-md transform hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out", // Hover effect
       },
       React.createElement("img", {
         className: "w-32 h-32 mx-auto mb-4 rounded-full border-4 border-indigo-600",
